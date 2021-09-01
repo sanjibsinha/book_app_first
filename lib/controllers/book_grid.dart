@@ -1,29 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/products.dart';
-import './product_item.dart';
+import '../models/books.dart';
+import 'book_item.dart';
 
-class ProductsGrid extends StatelessWidget {
+class BooksGrid extends StatelessWidget {
+  final bool showFavs;
+
+  const BooksGrid({
+    Key? key,
+    required this.showFavs,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final productsData = Provider.of<Products>(context);
-    final products = productsData.items;
+    final productsData = Provider.of<Books>(context);
+    final products = showFavs ? productsData.favoriteItems : productsData.items;
     return GridView.builder(
       padding: const EdgeInsets.all(10.0),
       itemCount: products.length,
-      itemBuilder: (ctx, i) => ChangeNotifierProvider(
+      itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
         // builder: (c) => products[i],
-        create: (BuildContext context) {
-          (context) => products[i];
-        },
-        child: ProductItem(
+        value: products[i],
+        child: const BookItem(
             // products[i].id,
             // products[i].title,
             // products[i].imageUrl,
             ),
       ),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 3 / 2,
         crossAxisSpacing: 10,
