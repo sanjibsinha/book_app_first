@@ -47,11 +47,31 @@ class BookDetailScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: double.infinity,
               child: Text(
+                loadedProduct.title,
+                textAlign: TextAlign.center,
+                softWrap: true,
+                style: TextStyle(
+                  fontFamily: 'Lato',
+                  fontSize: 30.0,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              width: double.infinity,
+              child: Text(
                 loadedProduct.description,
                 textAlign: TextAlign.center,
                 softWrap: true,
+                style: TextStyle(
+                  fontFamily: 'Anton',
+                  fontSize: 20.0,
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
