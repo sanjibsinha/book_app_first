@@ -1,9 +1,9 @@
-import 'package:book_app_first/views/book_overview_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'views/book_overview_screen.dart';
 
-import 'models/cart.dart';
-import 'models/orders.dart';
+/* import 'models/cart.dart';
+import 'models/orders.dart'; */
 
 import 'views/book_detail_screen.dart';
 import 'models/books.dart';
@@ -33,6 +33,7 @@ class BookApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Book Shop',
       theme: ThemeData(
         primarySwatch: Colors.purple,
