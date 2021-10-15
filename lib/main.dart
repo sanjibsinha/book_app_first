@@ -15,12 +15,12 @@ void main() {
         ChangeNotifierProvider(
           create: (_) => Books(),
         ),
-        ChangeNotifierProvider(
+        /* ChangeNotifierProvider(
           create: (_) => Cart(),
         ),
         ChangeNotifierProvider(
           create: (_) => Orders(),
-        ),
+        ), */
       ],
       child: const BookApp(),
     ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../controllers/book_grid.dart';
 
-enum FilterOptions {
+/* enum FilterOptions {
   Favorites,
   All,
-}
+} */
 
 class BooksOverviewScreen extends StatefulWidget {
   const BooksOverviewScreen({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _BooksOverviewScreenState extends State<BooksOverviewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Book Shop'),
-        actions: <Widget>[
+        /* actions: <Widget>[
           PopupMenuButton(
             onSelected: (FilterOptions selectedValue) {
               setState(() {
@@ -46,7 +46,7 @@ class _BooksOverviewScreenState extends State<BooksOverviewScreen> {
               ),
             ],
           ),
-        ],
+        ], */
       ),
       body: BooksGrid(showFavs: _showOnlyFavorites),
     );
