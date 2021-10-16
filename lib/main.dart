@@ -1,30 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 import 'views/book_overview_screen.dart';
 
 /* import 'models/cart.dart';
 import 'models/orders.dart'; */
 
 import 'views/book_detail_screen.dart';
-import 'models/books.dart';
+//import 'models/books.dart';
+import 'gridview_others/gridview_count.dart';
 
 void main() {
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (_) => Books(),
-        ),
-        /* ChangeNotifierProvider(
-          create: (_) => Cart(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => Orders(),
-        ), */
-      ],
-      child: const BookApp(),
-    ),
-  );
+      /* 
+     */
+      GridviewCountExample());
 }
 
 class BookApp extends StatelessWidget {
