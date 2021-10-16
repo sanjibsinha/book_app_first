@@ -15,7 +15,7 @@ void main() {
     /* 
      */
     //GridviewCountExample(),
-    GridViewExtentExample(),
+    GridViewExtent(),
   );
 }
 
